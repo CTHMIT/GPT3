@@ -28,7 +28,7 @@ def gpt3_reconstruct(input, temper=0.5, eng="text-davinci-002"):
                     top_p = 1.0,
                     max_tokens = 128,
                     )
-  sentance = replace_progran(response.choices[0].text)
+  sentance = replace_progran(response.choices[0].text) # code in other file
   prompt = response.usage.prompt_tokens
   total = response.usage.total_tokens
   similar = gpt3_similarity(sentance)
